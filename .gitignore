@@ -1,0 +1,24 @@
+# Python derleme çıktıları
+__pycache__/
+*.pyc
+
+# PyInstaller ve Inno Setup çıktıları
+build/
+dist/
+installer/Output/
+
+# Kurulum dosyasına gömülen ffmpeg (depoya girmez, derlemeden önce indirilir)
+vendor/
+
+# Sanal ortam
+venv/
+.venv/
+
+# Gizli bilgiler
+.env
+
+# Editör ve işletim sistemi dosyaları
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
