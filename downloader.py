@@ -14,7 +14,7 @@ ERROR_PATTERNS = (
     ("Private video", "private"),
     ("Sign in to confirm your age", "age_restricted"),
     ("age-restricted", "age_restricted"),
-    ("not available in your country", "region_locked"),
+    ("available in your country", "region_locked"),
     ("members-only", "members_only"),
     ("Join this channel", "members_only"),
     ("This live event will begin", "live_upcoming"),
