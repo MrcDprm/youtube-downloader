@@ -114,15 +114,19 @@ def download_file(wheel, limit, on_progress=None):
     digest = hashlib.sha256()
     received = 0
     request = urllib.request.Request(wheel["url"], headers={"User-Agent": f"YouTubeDownloader/{VERSION}"})
-    with urllib.request.urlopen(request, timeout=TIMEOUT_SECONDS) as response, open(temp, "wb") as file:
-        while chunk := response.read(CHUNK):
-            received += len(chunk)
-            if received > wheel["size"]:
-                break
-            digest.update(chunk)
-            file.write(chunk)
-            if on_progress:
-                on_progress(received, wheel["size"])
+    try:
+        with urllib.request.urlopen(request, timeout=TIMEOUT_SECONDS) as response, open(temp, "wb") as file:
+            while chunk := response.read(CHUNK):
+                received += len(chunk)
+                if received > wheel["size"]:
+                    break
+                digest.update(chunk)
+                file.write(chunk)
+                if on_progress:
+                    on_progress(received, wheel["size"])
+    except BaseException:  # bağlantı koptu ya da uygulama kapandı: yarım dosya kalmasın
+        temp.unlink(missing_ok=True)
+        raise
     if received != wheel["size"] or digest.hexdigest() != wheel["sha256"]:
         temp.unlink(missing_ok=True)
         raise UpdateError("checksum mismatch")
