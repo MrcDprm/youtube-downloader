@@ -13,7 +13,7 @@ def download_options(mode, choice, folder, ffmpeg_folder):
     """yt-dlp'nin YoutubeDL'ine verilecek ayarlar. mode: "video" ya da "audio"."""
     options = {
         "paths": {"home": str(folder)},
-        "outtmpl": {"default": "%(title)s.%(ext)s"},
+        "outtmpl": {"default": "%(title)s [%(id)s].%(ext)s"},  # kimlik: aynı başlıklı iki video birbirini ezmesin
         "windowsfilenames": True,  # \ / : * ? " < > | gibi karakterler dosya adından çıkarılır
         "trim_file_name": MAX_NAME_LENGTH,
         "overwrites": False,
