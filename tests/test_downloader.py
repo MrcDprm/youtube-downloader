@@ -15,6 +15,7 @@ class TestOptions(unittest.TestCase):
         self.assertTrue(options["windowsfilenames"])
         self.assertFalse(options["overwrites"])
         self.assertTrue(options["noplaylist"])
+        self.assertIn("%(id)s", options["outtmpl"]["default"])  # aynı başlıklı iki video birbirini ezmesin
         self.assertNotIn("postprocessors", options)
 
     def test_best_video_has_no_height_limit(self):
