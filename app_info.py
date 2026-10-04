@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 APP_NAME = "YouTube İndirici"
-VERSION = "0.1.0"
+VERSION = "1.0.0"
 AUTHOR = "Miraç Deprem"
 REPOSITORY_URL = "https://github.com/MrcDprm/youtube-downloader"
 
