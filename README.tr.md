@@ -150,14 +150,6 @@ Kurulum dosyası `installer/Output/` klasöründe oluşur.
 - **Teknik hataları anlaşılır mesajlara çevirmek.** yt-dlp sadece hata metni veriyor. Bilinen ifadeleri anlaşılır mesajlarla eşleştirdim (gizli, yaş sınırlı, bölgeye kapalı, engellendi); YouTube'un gerçek ifadesiyle yazdığım bir test eşleşmeyen bir kalıbı yakaladı.
 - **Küçük ayrıntılar fark yaratıyor.** Panodaki linki kendiliğinden yapıştırmak, link hâlâ okunurken "İndir"e basılabilmesi ve Tkinter resimleri kaybetmesin diye küçük resimlerin referansını tutmak, uygulamayı kullanırken fark ettiğim şeylerdi.
 
-## Gelecek Planları
-
-- Altyazılar
-- Videonun bir bölümünü indirme (başlangıç ve bitiş zamanı)
-- Aynı anda birden fazla indirme
-- Kanal indirme
-- macOS ve Linux paketleri
-
 ## Lisans
 
 [MIT](LICENSE) © 2026 Miraç Deprem

@@ -150,14 +150,6 @@ The installer is created in the `installer/Output/` folder.
 - **Turning technical errors into helpful messages.** yt-dlp only gives error text, so I matched known phrases to clear messages (private, age-restricted, region-locked, blocked), and a test with YouTube's real wording caught a pattern that did not match.
 - **Small details make a difference.** Pasting a link from the clipboard automatically, letting "Download" be pressed while a link is still being read, and keeping thumbnail images referenced so Tkinter does not lose them were all things I found while using the app.
 
-## Future Plans
-
-- Subtitles
-- Downloading part of a video (start and end time)
-- Several downloads at the same time
-- Channel downloads
-- Packages for macOS and Linux
-
 ## License
 
 [MIT](LICENSE) © 2026 Miraç Deprem
